@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.3.0](https://github.com/openfoodfacts/openfoodfacts-explorer/compare/v0.2.0...v0.3.0) (2026-11-09)
+
+
+### Features
+
+* **facets:** show product counts on category subcategories ([#2137](https://github.com/openfoodfacts/openfoodfacts-explorer/issues/2137)⁠) ([63bc318](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/63bc3186262dd029330b254167a5c64b38fef488))
+* use Equal Earth projection for facet maps ([93afa07](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/93afa0716c2a54c91c7cdb8d62f12bbe4d1e7710))
+* Use Query for facet pages and full map counts ([#2155](https://github.com/openfoodfacts/openfoodfacts-explorer/issues/2155)) ([0911865](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/09118658432de06e732147a5dfa0a209dedbc27b))
+
+
+### Bug Fixes
+
+* allow disabling Sentry at runtime ([#2153](https://github.com/openfoodfacts/openfoodfacts-explorer/issues/2153)) ([66e261e](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/66e261e0371268f5c4905395882887e3f13c8269))
+* enable requiring ES modules on Vercel ([03aa32d](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/03aa32d70d56336267e4d9575237629fc91c5cfa))
+* improve facet map color scale ([#2158](https://github.com/openfoodfacts/openfoodfacts-explorer/issues/2158)) ([007a473](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/007a4739617f3a2dcdf55acb779918fe0ab67fbc))
+* improve facet navigation and translate labels - [#2174](https://github.com/openfoodfacts/openfoodfacts-explorer/issues/2174)⁠ ([f9245e0](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/f9245e08080869fd71811fa9c1668c6b69545f0d))
+* **settings:** add News section icon ([ca0126f](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/ca0126f57ccd418de6fa4480a0aef4aad36e8556))
+
+
+### Performance Improvements
+
+* prioritize prominent logo images ([46d842c](https://github.com/openfoodfacts/openfoodfacts-explorer/commit/46d842c07fd0922017ac2b7aa6d93b98c2e5eeff))
+
 ## 0.2.0 (2026-11-04)
 
 
