@@ -111,7 +111,7 @@
 {#if !inline && !showInput}
 	<button
 		type="button"
-		class="btn ml-2 btn-circle btn-primary btn-sm"
+		class="btn ms-2 btn-circle btn-primary btn-sm"
 		onclick={() => (showInput = true)}
 		title={buttonTitle}
 		aria-label={buttonAriaLabel}
@@ -123,7 +123,7 @@
 		<li>
 			<button
 				type="button"
-				class="w-full cursor-pointer bg-base-100 px-4 py-2 text-left text-xs text-base-content transition-colors duration-150 hover:bg-primary hover:text-primary-content focus:bg-primary focus:text-primary-content sm:text-sm"
+				class="w-full cursor-pointer bg-base-100 px-4 py-2 text-start text-xs text-base-content transition-colors duration-150 hover:bg-primary hover:text-primary-content focus:bg-primary focus:text-primary-content sm:text-sm"
 				class:bg-primary={autoCompleteIndex === idx}
 				class:text-primary-content={autoCompleteIndex === idx}
 				onclick={(e) => {
@@ -139,7 +139,7 @@
 		</li>
 	{/snippet}
 
-	<div class={inline ? 'w-full' : 'dropdown relative ml-2 max-w-xs grow'}>
+	<div class={inline ? 'w-full' : 'dropdown relative ms-2 max-w-xs grow'}>
 		<label
 			class={inline
 				? 'input mt-2 w-full text-sm sm:text-base'
@@ -181,7 +181,7 @@
 					{#each filteredItems as item, idx (item.code || idx)}
 						<button
 							type="button"
-							class="btn h-auto w-full justify-start btn-ghost py-2 text-left text-xs font-normal normal-case btn-sm sm:text-sm"
+							class="btn h-auto w-full justify-start btn-ghost py-2 text-start text-xs font-normal normal-case btn-sm sm:text-sm"
 							class:bg-primary={autoCompleteIndex === idx}
 							class:text-primary-content={autoCompleteIndex === idx}
 							onclick={() => {

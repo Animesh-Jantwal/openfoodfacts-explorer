@@ -87,7 +87,7 @@
 					{/each}
 				</span>
 
-				<span class="ml-2">{shortcut.description}</span>
+				<span class="ms-2">{shortcut.description}</span>
 			{/each}
 		</div>
 

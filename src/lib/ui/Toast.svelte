@@ -46,7 +46,7 @@
 				<span class="text-sm">{toastItem.message}</span>
 				<button
 					type="button"
-					class="btn ml-2 btn-circle btn-ghost btn-xs"
+					class="btn ms-2 btn-circle btn-ghost btn-xs"
 					onclick={() => handleClose(toastItem.id)}
 					aria-label="Close notification"
 				>

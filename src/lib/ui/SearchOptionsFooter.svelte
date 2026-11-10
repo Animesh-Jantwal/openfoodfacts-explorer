@@ -64,7 +64,7 @@
 <footer class="search-options-footer">
 	{#if sortDropdownOpen}
 		<div
-			class="animate-fade-in-up absolute right-0 bottom-14 left-0 z-50 max-h-80 w-full overflow-y-auto rounded-t-xl border border-base-200 bg-base-100 py-2 shadow-2xl"
+			class="animate-fade-in-up absolute inset-s-0 inset-e-0 bottom-14 z-50 max-h-80 w-full overflow-y-auto rounded-t-xl border border-base-200 bg-base-100 py-2 shadow-2xl"
 		>
 			<div class="my-2 px-4 pb-2 text-sm font-bold tracking-wide text-base-content/60">
 				{$_('search.sort_by_label')}
@@ -89,7 +89,7 @@
 
 	{#if filterDropdownOpen}
 		<div
-			class="animate-fade-in-up absolute right-0 bottom-14 left-0 z-50 max-h-[75vh] w-full overflow-y-auto rounded-t-xl border border-base-200 bg-base-100 p-4 shadow-2xl"
+			class="animate-fade-in-up absolute inset-s-0 inset-e-0 bottom-14 z-50 max-h-[75vh] w-full overflow-y-auto rounded-t-xl border border-base-200 bg-base-100 p-4 shadow-2xl"
 		>
 			<div class="mb-3 flex items-center justify-between border-b border-base-200 pb-2">
 				<h3 class="text-base font-bold tracking-wide text-base-content/90">
@@ -124,7 +124,7 @@
 
 	<div class="flex h-full w-full">
 		<button
-			class="flex h-full w-1/2 flex-col items-center justify-center border-r border-base-200 py-1 focus-visible:ring-2 focus-visible:ring-primary"
+			class="flex h-full w-1/2 flex-col items-center justify-center border-e border-base-200 py-1 focus-visible:ring-2 focus-visible:ring-primary"
 			onclick={toggleSort}
 			aria-label={$_('search.sort_title', { default: 'Sort' })}
 			aria-expanded={sortDropdownOpen}
@@ -147,7 +147,7 @@
 		>
 			<span class="flex items-center text-sm leading-tight font-semibold tracking-wide">
 				{$_('search.filters_title', { default: 'Filter' })}
-				<IconMdiFilter class="ml-2 text-lg" />
+				<IconMdiFilter class="ms-2 text-lg" />
 			</span>
 		</button>
 	</div>
@@ -157,6 +157,6 @@
 	@reference './../../app.css';
 
 	.search-options-footer {
-		@apply sticky bottom-0 left-0 z-50 mt-4 flex h-14 min-h-0 w-full flex-col items-center justify-between border-t border-base-200 bg-base-100 px-0 lg:hidden;
+		@apply sticky inset-s-0 bottom-0 z-50 mt-4 flex h-14 min-h-0 w-full flex-col items-center justify-between border-t border-base-200 bg-base-100 px-0 lg:hidden;
 	}
 </style>

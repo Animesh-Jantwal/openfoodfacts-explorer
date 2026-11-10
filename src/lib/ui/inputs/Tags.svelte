@@ -165,7 +165,7 @@
 					<li>
 						<button
 							type="button"
-							class="w-full rounded-md bg-base-200 px-4 py-2 text-left text-base-content transition-colors duration-150 hover:bg-primary hover:text-primary-content focus:bg-primary focus:text-primary-content"
+							class="w-full rounded-md bg-base-200 px-4 py-2 text-start text-base-content transition-colors duration-150 hover:bg-primary hover:text-primary-content focus:bg-primary focus:text-primary-content"
 							class:bg-primary={autoCompleteIndex === index}
 							class:text-primary-content={autoCompleteIndex === index}
 							onmousedown={(e) => {
@@ -222,7 +222,7 @@
 				</span>
 			{/if}
 			<button
-				class="ml-1 cursor-pointer p-1 leading-0 hover:bg-base-300"
+				class="ms-1 cursor-pointer p-1 leading-0 hover:bg-base-300"
 				onclick={() => removeTag(tag)}
 				aria-label={`Remove tag "${tag}"`}
 			>

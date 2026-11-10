@@ -139,7 +139,7 @@
 
 	function getSectionClass(section: SidebarSection) {
 		return [
-			'group relative flex cursor-pointer items-center py-2 text-left transition-all duration-200 outline-none select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
+			'group relative flex cursor-pointer items-center py-2 text-start transition-all duration-200 outline-none select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
 			activeSection === section.id
 				? section.style === 'warning'
 					? 'font-semibold text-warning'
@@ -249,7 +249,7 @@
 </script>
 
 <div class={['hidden h-full lg:block', hidden ? 'lg:hidden' : '', className]}>
-	<aside class="sticky top-24 max-h-[calc(100vh-140px)] w-50 overflow-y-auto pr-2">
+	<aside class="sticky top-24 max-h-[calc(100vh-140px)] w-50 overflow-y-auto pe-2">
 		{#if title || (headerActionLabel && onHeaderAction)}
 			<div class={['mb-4 flex items-center px-1', title ? 'justify-between' : 'justify-end']}>
 				{#if title}
@@ -271,14 +271,14 @@
 		<nav
 			bind:this={navElement}
 			aria-label={ariaLabel || $_('product.sidebar_navigation', { default: 'Product sections' })}
-			class="relative flex flex-col gap-1 border-l-2 border-base-300 pl-4 text-sm"
+			class="relative flex flex-col gap-1 border-s-2 border-base-300 ps-4 text-sm"
 		>
 			<!-- Active indicator line with smooth sliding transition -->
 			{#if indicatorHeight > 0}
 				<div
 					aria-hidden="true"
 					class={[
-						'absolute -left-[2px] w-[2px] rounded-full transition-all duration-300 ease-in-out',
+						'absolute -inset-s-[2px] w-[2px] rounded-full transition-all duration-300 ease-in-out',
 						sections.find((s) => s.id === activeSection)?.style === 'warning'
 							? 'bg-warning'
 							: 'bg-primary'
@@ -301,7 +301,7 @@
 							{@const Icon = section.icon}
 							<Icon
 								aria-hidden="true"
-								class="mr-2 h-4 w-4 transition-transform duration-200 group-hover:scale-110"
+								class="me-2 h-4 w-4 transition-transform duration-200 group-hover:scale-110"
 							/>
 						{/if}
 						<span>{section.label}</span>
@@ -319,7 +319,7 @@
 							{@const Icon = section.icon}
 							<Icon
 								aria-hidden="true"
-								class="mr-2 h-4 w-4 transition-transform duration-200 group-hover:scale-110"
+								class="me-2 h-4 w-4 transition-transform duration-200 group-hover:scale-110"
 							/>
 						{/if}
 						<span>{section.label}</span>
@@ -334,13 +334,13 @@
 	<button
 		type="button"
 		onclick={() => (hidden = false)}
-		class="group fixed top-1/2 left-0 z-50 hidden h-24 w-5 -translate-y-1/2 cursor-pointer items-center justify-center rounded-r-xl border border-l-0 border-base-300 bg-base-200 text-base-content/70 shadow-md transition-all duration-300 outline-none hover:w-7 hover:border-primary hover:bg-primary hover:text-primary-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:flex"
+		class="group fixed inset-s-0 top-1/2 z-50 hidden h-24 w-5 -translate-y-1/2 cursor-pointer items-center justify-center rounded-e-xl border border-s-0 border-base-300 bg-base-200 text-base-content/70 shadow-md transition-all duration-300 outline-none hover:w-7 hover:border-primary hover:bg-primary hover:text-primary-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:flex"
 		title={$_('product.sidebar.show', { default: 'Show Sidebar' })}
 		aria-label={$_('product.sidebar.show', { default: 'Show Sidebar' })}
 	>
 		<IconMdiChevronRight
 			aria-hidden="true"
-			class="h-4 w-4 transition-transform duration-200 group-hover:scale-125"
+			class="h-4 w-4 transition-transform duration-200 group-hover:scale-125 rtl:rotate-180"
 		/>
 	</button>
 {/if}

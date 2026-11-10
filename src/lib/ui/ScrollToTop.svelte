@@ -18,7 +18,7 @@
 
 {#if visible}
 	<div
-		class="fixed right-6 bottom-6 z-40 hidden md:block"
+		class="fixed inset-e-6 bottom-6 z-40 hidden md:block"
 		transition:fly={{ y: 20, duration: 300 }}
 	>
 		<button

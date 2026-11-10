@@ -235,14 +235,14 @@
 <div
 	class="relative flex flex-col items-center justify-center gap-3 overflow-hidden bg-primary-content px-10 py-8"
 >
-	<div class="absolute top-0 left-0 z-0 hidden md:block">
+	<div class="absolute inset-s-0 top-0 z-0 hidden md:block">
 		<img
 			src={footerTopLeft}
 			style="width: 177px; height: 177px;"
 			alt={$_('footer.decorative_alt')}
 		/>
 	</div>
-	<div class="absolute right-0 bottom-0 z-0 hidden md:block">
+	<div class="absolute inset-e-0 bottom-0 z-0 hidden md:block">
 		<img
 			src={footerBottomRight}
 			style="width: 251px; height: 178px;"

@@ -31,6 +31,7 @@
 	import ExploreByMenu from '#lib/ui/ExploreByMenu.svelte';
 
 	import { _, getLocale, locale } from '#lib/i18n/index.js';
+	import { getTextDirection } from '#lib/i18n/direction.js';
 	import { startLogout } from '#lib/auth/logout.js';
 	import {
 		IMAGE_HOST,
@@ -234,6 +235,13 @@
 			const lang = locale?.split('-')[0]?.toLowerCase();
 
 			config.setAttribute('language-code', lang ?? 'en');
+
+			// The interface language can change without a reload, or differ from the server's
+			// guess, so keep <html lang> and the writing direction in line with it.
+			if (locale) {
+				document.documentElement.lang = locale;
+				document.documentElement.dir = getTextDirection(locale);
+			}
 		});
 		return () => {
 			unsubscribe();
@@ -269,7 +277,7 @@
 </div>
 
 {#if navigating.to != null}
-	<progress class="progress fixed top-0 left-0 z-50 h-1 w-full rounded-none progress-secondary"
+	<progress class="progress fixed inset-s-0 top-0 z-50 h-1 w-full rounded-none progress-secondary"
 	></progress>
 {/if}
 
@@ -342,7 +350,7 @@
 									onclick={startLogout}
 									class="flex gap-2 px-4 py-2 text-error hover:bg-error/10 active:bg-error active:text-error-content"
 								>
-									<IconMdiLogout class="h-5 w-5" />
+									<IconMdiLogout class="h-5 w-5 rtl:rotate-180" />
 									<span>{$_('navbar.logout', { default: 'Logout' })}</span>
 								</button>
 							</li>
@@ -354,7 +362,7 @@
 						class="btn gap-2 rounded-full border-base-300 btn-outline px-4 transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-content"
 						href={getLoginUrl(new URL(page.url.href))}
 					>
-						<IconMdiLogin class="h-5 w-5" />
+						<IconMdiLogin class="h-5 w-5 rtl:rotate-180" />
 						<span>{$_('navbar.login', { default: 'Login' })}</span>
 					</a>
 				{/if}
@@ -369,7 +377,7 @@
 </div>
 
 <!-- Mobile Header -->
-<div class="top-0 right-0 left-0 z-50 mx-4 mb-2 bg-base-100 xl:hidden">
+<div class="inset-s-0 inset-e-0 top-0 z-50 mx-4 mb-2 bg-base-100 xl:hidden">
 	<div class="navbar mx-auto mt-2 mb-2 bg-base-100 px-0">
 		<div class="navbar-start">
 			<a href="/">
@@ -482,7 +490,7 @@
 							onclick={startLogout}
 							class="btn gap-2 btn-outline btn-error btn-sm"
 						>
-							<IconMdiLogout class="h-4 w-4" />
+							<IconMdiLogout class="h-4 w-4 rtl:rotate-180" />
 							<span>{$_('navbar.logout', { default: 'Logout' })}</span>
 						</button>
 					</div>
@@ -494,7 +502,7 @@
 				class="btn gap-2 rounded-full btn-outline px-5 transition-all duration-300 hover:bg-primary hover:text-primary-content"
 				href={getLoginUrl(new URL(page.url.href))}
 			>
-				<IconMdiLogin class="h-5 w-5" />
+				<IconMdiLogin class="h-5 w-5 rtl:rotate-180" />
 				<span>{$_('navbar.login', { default: 'Login' })}</span>
 			</a>
 		{/if}
@@ -513,7 +521,7 @@
 {#if page.url.pathname !== '/compare'}
 	<div
 		class={[
-			'fixed left-4',
+			'fixed inset-s-4',
 			page.url.pathname === '/search' ? 'bottom-20 z-40 lg:bottom-4 lg:z-50' : 'bottom-4 z-50'
 		]}
 	>

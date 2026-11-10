@@ -521,7 +521,7 @@
 
 {#if dev && !$userInfo}
 	<div class="my-8 alert text-lg alert-warning" role="alert">
-		<IconMdiAlert class="mr-2 h-6 w-6 shrink-0" />
+		<IconMdiAlert class="me-2 h-6 w-6 shrink-0" />
 		<div>
 			<p>
 				<strong>

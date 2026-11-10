@@ -61,7 +61,7 @@
 		<div
 			class="flex h-80 w-full skeleton items-center justify-center rounded-lg text-base-content/50"
 		>
-			<span class="loading mr-2 loading-md loading-spinner"></span>
+			<span class="loading me-2 loading-md loading-spinner"></span>
 			{$_('product.prices.loading_map', { default: 'Loading prices map…' })}
 		</div>
 	{:else}
@@ -69,7 +69,7 @@
 			<div
 				class="flex h-80 w-full skeleton items-center justify-center rounded-lg text-base-content/50"
 			>
-				<span class="loading mr-2 loading-md loading-spinner"></span>
+				<span class="loading me-2 loading-md loading-spinner"></span>
 				{$_('product.prices.loading_map', { default: 'Loading prices map…' })}
 			</div>
 		{:then PricesMap}

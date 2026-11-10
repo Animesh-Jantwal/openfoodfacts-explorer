@@ -200,7 +200,7 @@
 			<tr transition:slide>
 				<td aria-label="Key">
 					<div class="flex w-full">
-						<a href="/folksonomy/{tag.k}" class="grow link pl-2 font-mono max-sm:w-20" type="text">
+						<a href="/folksonomy/{tag.k}" class="grow link ps-2 font-mono max-sm:w-20" type="text">
 							{tag.k}
 						</a>
 					</div>

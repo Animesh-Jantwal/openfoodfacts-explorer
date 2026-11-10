@@ -71,7 +71,7 @@
 
 	:global(.ordered_ingredients_list) {
 		list-style-type: decimal;
-		padding-left: 1.5em;
+		padding-inline-start: 1.5em;
 	}
 
 	:global([id^='data-error-']) {

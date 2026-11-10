@@ -524,7 +524,7 @@
 			aria-label="Image editing area"
 		>
 			{#if isMounted}
-				<cropper-canvas background class="ltr relative block h-96 w-full">
+				<cropper-canvas background dir="ltr" class="relative block h-96 w-full">
 					<cropper-image
 						bind:this={cropperImage}
 						src={image.url}

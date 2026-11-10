@@ -245,7 +245,7 @@
 				onchange={() => handleCollapseToggle('languages')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiTranslate class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiTranslate class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.languages')}
 			</div>
 			<div class="collapse-content">
@@ -261,7 +261,7 @@
 				onchange={() => handleCollapseToggle('images')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiImageMultiple class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiImageMultiple class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.images')}
 			</div>
 			<div class="collapse-content">
@@ -277,7 +277,7 @@
 				onchange={() => handleCollapseToggle('basic-info')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiInformation class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiInformation class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.basic_info')}
 			</div>
 			<div class="collapse-content">
@@ -301,7 +301,7 @@
 				onchange={() => handleCollapseToggle('origin-traceability')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiEarth class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiEarth class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.origin_traceability')}
 			</div>
 			<div class="collapse-content">
@@ -317,7 +317,7 @@
 				onchange={() => handleCollapseToggle('ingredients')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiFormatListBulleted class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiFormatListBulleted class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.ingredients')}
 			</div>
 			<div class="collapse-content">
@@ -334,7 +334,7 @@
 				onchange={() => handleCollapseToggle('nutrition')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiNutrition class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiNutrition class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.nutrition')}
 			</div>
 			<div class="collapse-content">
@@ -350,7 +350,7 @@
 				onchange={() => handleCollapseToggle('prices')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiTagMultiple class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiTagMultiple class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.prices')}
 			</div>
 			<div class="collapse-content">
@@ -364,7 +364,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<IconMdiOpenInNew class="mr-1 h-4 w-4" />
+						<IconMdiOpenInNew class="me-1 h-4 w-4" />
 						{$_('product.edit.prices.add_price_btn')}
 					</a>
 				{/if}
@@ -379,7 +379,7 @@
 				onchange={() => handleCollapseToggle('packaging')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiPackageVariant class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiPackageVariant class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.packaging')}
 			</div>
 			<div class="collapse-content">
@@ -395,7 +395,7 @@
 				onchange={() => handleCollapseToggle('comment')}
 			/>
 			<div class="collapse-title flex items-center text-sm font-bold sm:text-base">
-				<IconMdiCommentText class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+				<IconMdiCommentText class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 				{$_('product.edit.sections.comment')}
 			</div>
 			<div class="collapse-content">
@@ -415,7 +415,7 @@
 					onchange={() => handleCollapseToggle('moderator-tools')}
 				/>
 				<div class="collapse-title flex items-center text-sm font-bold text-warning sm:text-base">
-					<IconMdiShieldAccount class="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+					<IconMdiShieldAccount class="me-2 h-4 w-4 sm:h-5 sm:w-5" />
 					{$_('product.edit.sections.moderator_tools')}
 				</div>
 				<div class="collapse-content">
@@ -450,7 +450,7 @@
 		type="button"
 	>
 		{#if isSubmitting}
-			<span class="loading mr-2 loading-xs loading-spinner sm:loading-sm" aria-hidden="true"></span>
+			<span class="loading me-2 loading-xs loading-spinner sm:loading-sm" aria-hidden="true"></span>
 		{/if}
 		{$_('product.edit.save_btn')}
 	</button>

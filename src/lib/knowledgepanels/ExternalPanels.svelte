@@ -89,7 +89,7 @@
 		<header class="border-b border-base-300 bg-base-200">
 			<button
 				type="button"
-				class="flex w-full cursor-pointer items-start gap-4 p-4 text-left hover:bg-base-300/50 sm:p-6"
+				class="flex w-full cursor-pointer items-start gap-4 p-4 text-start hover:bg-base-300/50 sm:p-6"
 				aria-expanded={isExpanded(source.id)}
 				aria-controls={panelId}
 				onclick={() => toggleSource(source.id)}

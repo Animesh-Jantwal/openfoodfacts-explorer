@@ -297,7 +297,7 @@
 			<div class="max-w-full px-4" role="alert">
 				<p class="text-error">{error}</p>
 				{#if invalidBarcodePayload !== null}
-					<div class="mt-3 max-w-full text-left">
+					<div class="mt-3 max-w-full text-start">
 						<p class="mb-1 text-sm font-semibold">
 							{$_('qr.invalid_barcode_payload', { default: 'Scanner payload' })}
 						</p>
@@ -329,7 +329,7 @@
 
 		{#if scannerTimedOut}
 			<form class="mt-6 w-full max-w-md" onsubmit={submitManualBarcode}>
-				<label class="mb-2 block text-left" for="manual-barcode">
+				<label class="mb-2 block text-start" for="manual-barcode">
 					{$_('qr.manual_barcode', { default: 'Enter the barcode manually' })}
 				</label>
 

@@ -23,7 +23,7 @@
 
 {#if $isCalculatorOpen}
 	<div
-		class="calculator-panel fixed top-20 right-4 z-50 w-96 max-w-full rounded-lg bg-base-100 p-4 shadow-lg"
+		class="calculator-panel fixed inset-e-4 top-20 z-50 w-96 max-w-full rounded-lg bg-base-100 p-4 shadow-lg"
 	>
 		<div class="mb-4 flex items-center justify-between">
 			<h3 class="text-lg font-bold">Nutrition Calculator</h3>
@@ -49,7 +49,7 @@
 								<img
 									src={item.imageUrl}
 									alt={item.name}
-									class="mr-2 h-12 w-12 rounded object-cover"
+									class="me-2 h-12 w-12 rounded object-cover"
 								/>
 							{/if}
 							<div>
@@ -66,14 +66,14 @@
 								<IconMdiMinus class="h-4 w-4" />
 							</button>
 							<button
-								class="btn ml-1 btn-square btn-sm"
+								class="btn ms-1 btn-square btn-sm"
 								onclick={() => updateItemQuantity(item.id, 25)}
 								aria-label="Increase quantity"
 							>
 								<IconMdiPlus class="h-4 w-4" />
 							</button>
 							<button
-								class="btn ml-1 btn-square btn-sm"
+								class="btn ms-1 btn-square btn-sm"
 								onclick={() => removeItem(item.id)}
 								aria-label="Remove item"
 							>

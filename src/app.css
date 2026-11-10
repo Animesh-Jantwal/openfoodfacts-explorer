@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/* Tests contain sample class names that are not used by the interface */
+@source not './**/*.test.ts';
+
 @plugin 'daisyui';
 @plugin '@tailwindcss/typography';
 

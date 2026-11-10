@@ -28,7 +28,7 @@
 				</div>
 			{:else}
 				<div class="tab tab-disabled cursor-default">
-					<IconMdiLanguage class="mr-1 h-5 w-5 align-middle" />
+					<IconMdiLanguage class="me-1 h-5 w-5 align-middle" />
 				</div>
 			{/if}
 

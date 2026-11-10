@@ -229,7 +229,7 @@
 	</summary>
 	<ul
 		style={mobileDropdownStyle}
-		class="menu dropdown-content absolute top-full left-0 z-50 mt-1 w-full max-w-[calc(100vw-2rem)] rounded-box border border-base-300 bg-base-100 p-2 shadow-xl max-md:fixed md:w-60"
+		class="menu dropdown-content absolute inset-s-0 top-full z-50 mt-1 w-full max-w-[calc(100vw-2rem)] rounded-box border border-base-300 bg-base-100 p-2 shadow-xl max-md:fixed md:w-60"
 	>
 		{#if onRemoveFacet && selectedInclude.length === 0 && selectedExclude.length === 0}
 			<li class="mb-1 border-b border-base-300/40 pb-1">

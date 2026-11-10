@@ -381,6 +381,7 @@
 
 <div
 	bind:this={mapContainer}
+	dir="ltr"
 	class="countries-map mx-auto w-full max-w-3xl"
 	style:--gradient-start={rgbToCSS(THEME.gradient.start)}
 	style:--gradient-end={rgbToCSS(THEME.gradient.end)}

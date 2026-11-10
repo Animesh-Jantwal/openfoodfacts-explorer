@@ -28,11 +28,11 @@
 	<h2
 		class="mb-6 items-center justify-center gap-2 text-center text-base font-bold text-primary md:text-lg lg:text-xl xl:text-2xl"
 	>
-		<IconMdiInformation class="mr-1 h-6 w-6 align-middle" />
+		<IconMdiInformation class="me-1 h-6 w-6 align-middle" />
 		{$_('product.edit.sections.origin_traceability', { default: 'Traceability & Origins' })}
-		<button type="button" class="ml-2 align-middle" aria-label="Info" onclick={toggleInfo}>
+		<button type="button" class="ms-2 align-middle" aria-label="Info" onclick={toggleInfo}>
 			<IconMdiHelpCircleOutline
-				class="ml-4 h-6 w-6 text-primary hover:cursor-pointer hover:text-primary/70"
+				class="ms-4 h-6 w-6 text-primary hover:cursor-pointer hover:text-primary/70"
 			/>
 		</button>
 	</h2>
@@ -42,7 +42,7 @@
 		>
 			<button
 				type="button"
-				class="absolute top-2 right-2 m-2 rounded p-1 hover:bg-primary/10"
+				class="absolute inset-e-2 top-2 m-2 rounded p-1 hover:bg-primary/10"
 				aria-label="Close"
 				onclick={toggleInfo}
 			>

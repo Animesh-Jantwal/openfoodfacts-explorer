@@ -91,7 +91,7 @@
 					<span>{chip.itemLabel}</span>
 					<button
 						type="button"
-						class="ml-0.5 cursor-pointer rounded-full p-0.5 hover:bg-primary-content/20"
+						class="ms-0.5 cursor-pointer rounded-full p-0.5 hover:bg-primary-content/20"
 						onclick={() => onRemoveInclude(chip.facetKey, chip.itemKey)}
 						aria-label={$_('search.remove_include_name', {
 							default: 'Remove {name} filter',
@@ -109,7 +109,7 @@
 					<span>{chip.itemLabel}</span>
 					<button
 						type="button"
-						class="ml-0.5 cursor-pointer rounded-full p-0.5 hover:bg-error-content/20"
+						class="ms-0.5 cursor-pointer rounded-full p-0.5 hover:bg-error-content/20"
 						onclick={() => onRemoveExclude(chip.facetKey, chip.itemKey)}
 						aria-label={$_('search.remove_exclude_name', {
 							default: 'Remove exclude {name} filter',
@@ -124,7 +124,7 @@
 
 		<button
 			type="button"
-			class="btn ml-auto gap-1 btn-ghost text-xs text-base-content/70 btn-xs hover:text-error"
+			class="btn ms-auto gap-1 btn-ghost text-xs text-base-content/70 btn-xs hover:text-error"
 			onclick={onClearAll}
 		>
 			<IconMdiFilterOffOutline class="h-3.5 w-3.5" />
@@ -183,7 +183,7 @@
 						</span>
 						<button
 							type="button"
-							class="ml-1 shrink-0 cursor-pointer rounded-full p-0.5 hover:bg-primary-content/20"
+							class="ms-1 shrink-0 cursor-pointer rounded-full p-0.5 hover:bg-primary-content/20"
 							onclick={() => onRemoveInclude(chip.facetKey, chip.itemKey)}
 							aria-label={$_('search.remove_include_name', {
 								default: 'Remove {name} filter',
@@ -205,7 +205,7 @@
 						</span>
 						<button
 							type="button"
-							class="ml-1 shrink-0 cursor-pointer rounded-full p-0.5 hover:bg-error-content/20"
+							class="ms-1 shrink-0 cursor-pointer rounded-full p-0.5 hover:bg-error-content/20"
 							onclick={() => onRemoveExclude(chip.facetKey, chip.itemKey)}
 							aria-label={$_('search.remove_exclude_name', {
 								default: 'Remove exclude {name} filter',

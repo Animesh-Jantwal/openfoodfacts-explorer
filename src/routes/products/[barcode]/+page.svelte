@@ -384,7 +384,7 @@
 				{#await productAttributes}
 					<div class="flex items-center justify-center py-8">
 						<span class="loading loading-lg loading-spinner"></span>
-						<span class="ml-2">{$_('product.loading_attributes')}</span>
+						<span class="ms-2">{$_('product.loading_attributes')}</span>
 					</div>
 				{:then attributes}
 					{#if attributes != null}
@@ -418,7 +418,7 @@
 					{#await externalKnowledgePanelBatchPromise}
 						<div class="flex items-center justify-center py-8">
 							<span class="loading loading-lg loading-spinner"></span>
-							<span class="ml-2">
+							<span class="ms-2">
 								{$_('product.external_sources.loading', {
 									default: 'Loading external sources…'
 								})}

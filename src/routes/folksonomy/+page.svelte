@@ -250,15 +250,15 @@
 	{:else}
 		<div class="mb-4 rounded-lg bg-base-200 p-3 text-sm opacity-75">
 			<h3 class="mb-1 font-semibold">{$_('folksonomy.key_visualization_guide.title')}</h3>
-			<ul class="ml-4 list-disc">
+			<ul class="ms-4 list-disc">
 				<li>
 					{$_('folksonomy.key_visualization_guide.badge_products_start')}
-					<span class="mr-1 ml-1 badge badge-sm">123</span>
+					<span class="ms-1 me-1 badge badge-sm">123</span>
 					{$_('folksonomy.key_visualization_guide.badge_products_end')}
 				</li>
 				<li>
 					{$_('folksonomy.key_visualization_guide.badge_values_start')}
-					<span class="mr-1 ml-1 badge badge-sm badge-accent">45</span>
+					<span class="ms-1 me-1 badge badge-sm badge-accent">45</span>
 					{$_('folksonomy.key_visualization_guide.badge_values_end')}
 				</li>
 				<li>

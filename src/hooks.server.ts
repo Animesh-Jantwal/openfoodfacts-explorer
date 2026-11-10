@@ -3,6 +3,7 @@ import * as Sentry from '@sentry/sveltekit';
 import { clearWindow } from 'isomorphic-dompurify';
 
 import { locale } from '#lib/i18n/index.js';
+import { getTextDirection } from '#lib/i18n/direction.js';
 import { ServerTiming } from '#lib/server/timing.ts';
 import { dev } from '$app/env';
 
@@ -10,7 +11,8 @@ export const handle: Handle = sequence(Sentry.sentryHandle(), async ({ event, re
 	// Server timing setup
 	const startTime = performance.now();
 
-	const lang = event.request.headers.get('accept-language')?.split(',')[0];
+	// First language of the header, without its quality value (`fr-FR;q=0.9` → `fr-FR`)
+	const lang = event.request.headers.get('accept-language')?.split(',')[0]?.split(';')[0]?.trim();
 	if (lang) {
 		locale.set(lang);
 	}
@@ -19,9 +21,10 @@ export const handle: Handle = sequence(Sentry.sentryHandle(), async ({ event, re
 
 	const resolved = await resolve(event, {
 		transformPageChunk: ({ html }) => {
-			// Replace the %lang% placeholder in app.html with the user's active language
-			// from the accept-language header to ensure proper accessibility and SEO.
-			return html.replace('%lang%', lang || 'en');
+			// Replace the %lang% and %dir% placeholders in app.html with the user's active language
+			// from the accept-language header and its writing direction, for accessibility and SEO.
+			const pageLang = lang || 'en';
+			return html.replace('%lang%', pageLang).replace('%dir%', getTextDirection(pageLang));
 		},
 		filterSerializedResponseHeaders(name) {
 			return ['content-length', 'content-type', 'etag', 'cache-control'].includes(

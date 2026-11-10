@@ -165,7 +165,7 @@
 <!-- Mobile step header -->
 <div class="navigation mb-6 flex items-center justify-between md:hidden">
 	<button class="btn btn-outline btn-sm" onclick={prevStep} type="button" title={$_('common.back')}>
-		<IconMdiArrowLeft class="h-4 w-4" />
+		<IconMdiArrowLeft class="h-4 w-4 rtl:rotate-180" />
 		{$_('common.back')}
 	</button>
 
@@ -186,7 +186,7 @@
 		title={$_('common.next')}
 	>
 		{$_('common.next')}
-		<IconMdiArrowRight class="h-4 w-4" />
+		<IconMdiArrowRight class="h-4 w-4 rtl:rotate-180" />
 	</button>
 </div>
 
@@ -231,18 +231,22 @@
 			onclick={prevStep}
 			type="button"
 		>
-			<IconMdiArrowLeft class="mr-2 h-4 w-4" />{$_('common.back', { default: 'Back' })}
+			<IconMdiArrowLeft class="me-2 h-4 w-4 rtl:rotate-180" />{$_('common.back', {
+				default: 'Back'
+			})}
 		</button>
 	{/if}
 
 	<div class="flex w-full flex-col justify-end gap-3 md:flex-row">
 		{#if currentStep === 0 || currentStep === 1}
 			<button
-				class="btn w-full text-sm btn-secondary sm:text-base md:ml-auto md:w-auto md:min-w-40"
+				class="btn w-full text-sm btn-secondary sm:text-base md:ms-auto md:w-auto md:min-w-40"
 				onclick={nextStep}
 				type="button"
 			>
-				{$_('common.next', { default: 'Next' })}<IconMdiArrowRight class="ml-2 h-4 w-4" />
+				{$_('common.next', { default: 'Next' })}<IconMdiArrowRight
+					class="ms-2 h-4 w-4 rtl:rotate-180"
+				/>
 			</button>
 		{:else if currentStep === 2}
 			<button
@@ -252,7 +256,7 @@
 				type="button"
 			>
 				{#if isSubmitting}
-					<span class="loading mr-2 loading-sm loading-spinner"></span>
+					<span class="loading me-2 loading-sm loading-spinner"></span>
 				{/if}
 				{$_('product.edit.submit_product', { default: 'Submit' })}
 			</button>
@@ -262,17 +266,17 @@
 				type="button"
 			>
 				{$_('product.edit.continue_to_score', { default: 'Score Calculation' })}
-				<IconMdiArrowRight class="ml-2 h-4 w-4" />
+				<IconMdiArrowRight class="ms-2 h-4 w-4 rtl:rotate-180" />
 			</button>
 		{:else if currentStep === 3}
 			<button
-				class="btn w-full text-sm btn-success sm:text-base md:ml-auto md:w-auto md:min-w-40"
+				class="btn w-full text-sm btn-success sm:text-base md:ms-auto md:w-auto md:min-w-40"
 				onclick={submit}
 				disabled={isSubmitting || disableSubmit}
 				type="button"
 			>
 				{#if isSubmitting}
-					<span class="loading mr-2 loading-sm loading-spinner"></span>
+					<span class="loading me-2 loading-sm loading-spinner"></span>
 				{/if}
 				{$_('product.edit.submit_product', { default: 'Submit' })}
 			</button>

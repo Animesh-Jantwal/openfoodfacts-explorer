@@ -381,9 +381,9 @@
 				{comparison.formatted}
 				{unit}
 				{#if comparison.isBest}
-					<span class="ml-1 badge badge-sm badge-success">{$_('compare.best')}</span>
+					<span class="ms-1 badge badge-sm badge-success">{$_('compare.best')}</span>
 				{:else if comparison.isWorst}
-					<span class="ml-1 badge badge-sm badge-error">{$_('compare.worst')}</span>
+					<span class="ms-1 badge badge-sm badge-error">{$_('compare.worst')}</span>
 				{/if}
 			</span>
 			{#if comparison.diffFormatted && comparisonMode !== 'absolute'}
@@ -411,7 +411,7 @@
 			<div class="relative rounded-lg border-2 p-4 shadow-md">
 				{#if !readonly && onRemoveProduct}
 					<button
-						class="btn absolute top-2 right-2 z-10 btn-circle btn-soft btn-error btn-sm"
+						class="btn absolute inset-e-2 top-2 z-10 btn-circle btn-soft btn-error btn-sm"
 						onclick={() => onRemoveProduct(product.code)}
 						aria-label="Remove product from comparison"
 					>
@@ -483,7 +483,7 @@
 					<div class="mt-4 border-t pt-4">
 						<button
 							type="button"
-							class="flex w-full items-center justify-between text-left text-sm font-semibold"
+							class="flex w-full items-center justify-between text-start text-sm font-semibold"
 							onclick={() => {
 								expandedNutrients[product.code] = !expandedNutrients[product.code];
 							}}
@@ -528,7 +528,7 @@
 	<table class="table w-full table-fixed table-zebra">
 		<thead>
 			<tr>
-				<th class="sticky left-0 z-10 w-40 bg-base-100"></th>
+				<th class="sticky inset-s-0 z-10 w-40 bg-base-100"></th>
 				{#each products as product, index (product.code)}
 					<th
 						animate:flip={{ duration: 300 }}
@@ -598,7 +598,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td class="sticky left-0 w-40 bg-base-100 font-semibold">{$_('compare.name')}</td>
+				<td class="sticky inset-s-0 w-40 bg-base-100 font-semibold">{$_('compare.name')}</td>
 				{#each products as product (product.code)}
 					<td class="text-center text-sm" animate:flip={{ duration: 300 }}>
 						<a href={`/products/${product.code}`} class="no-underline hover:text-primary">
@@ -608,7 +608,8 @@
 				{/each}
 			</tr>
 			<tr>
-				<td class="sticky left-0 w-40 bg-base-100 font-semibold">{$_('compare.code_barcode')}</td>
+				<td class="sticky inset-s-0 w-40 bg-base-100 font-semibold">{$_('compare.code_barcode')}</td
+				>
 				{#each products as product (product.code)}
 					<td class="text-center font-mono text-sm" animate:flip={{ duration: 300 }}>
 						{product.code}
@@ -616,7 +617,7 @@
 				{/each}
 			</tr>
 			<tr>
-				<td class="sticky left-0 w-40 bg-base-100 font-semibold">{$_('compare.brand')}</td>
+				<td class="sticky inset-s-0 w-40 bg-base-100 font-semibold">{$_('compare.brand')}</td>
 				{#each products as product (product.code)}
 					<td class="text-center text-sm" animate:flip={{ duration: 300 }}>
 						{product.brands ?? '-'}
@@ -624,7 +625,7 @@
 				{/each}
 			</tr>
 			<tr>
-				<td class="sticky left-0 w-40 bg-base-100 font-semibold">{$_('compare.quantity')}</td>
+				<td class="sticky inset-s-0 w-40 bg-base-100 font-semibold">{$_('compare.quantity')}</td>
 				{#each products as product (product.code)}
 					<td class="text-center text-sm" animate:flip={{ duration: 300 }}>
 						{product.quantity ?? '-'}
@@ -632,7 +633,7 @@
 				{/each}
 			</tr>
 			<tr>
-				<td class="sticky left-0 w-40 bg-base-100 font-semibold">{$_('nutriscore')}</td>
+				<td class="sticky inset-s-0 w-40 bg-base-100 font-semibold">{$_('nutriscore')}</td>
 				{#each products as product (product.code)}
 					{@const comparison = getScoreComparison(product.nutriscore_grade, products, 'nutriscore')}
 					<td class="text-center" animate:flip={{ duration: 300 }}>
@@ -649,7 +650,7 @@
 				{/each}
 			</tr>
 			<tr>
-				<td class="sticky left-0 w-40 bg-base-100 font-semibold"
+				<td class="sticky inset-s-0 w-40 bg-base-100 font-semibold"
 					>{$_('compare.nova_group', { default: 'Ultra-processing level' })}</td
 				>
 				{#each products as product (product.code)}
@@ -668,7 +669,7 @@
 				{/each}
 			</tr>
 			<tr>
-				<td class="sticky left-0 w-40 bg-base-100 font-semibold">{$_('ecoscore')}</td>
+				<td class="sticky inset-s-0 w-40 bg-base-100 font-semibold">{$_('ecoscore')}</td>
 				{#each products as product (product.code)}
 					{@const comparison = getScoreComparison(product.ecoscore_grade, products, 'ecoscore')}
 					<td class="text-center" animate:flip={{ duration: 300 }}>
@@ -685,7 +686,9 @@
 				{/each}
 			</tr>
 			<tr>
-				<td class="sticky left-0 w-40 bg-base-100 font-semibold">{$_('compare.num_additives')}</td>
+				<td class="sticky inset-s-0 w-40 bg-base-100 font-semibold"
+					>{$_('compare.num_additives')}</td
+				>
 				{#each products as product (product.code)}
 					<td class="text-center" animate:flip={{ duration: 300 }}>
 						{product.additives_n ?? '-'}
@@ -694,14 +697,14 @@
 			</tr>
 			<tr class="bg-base-200">
 				<td></td>
-				<td colspan={products.length} class="sticky left-0 text-center font-bold">
+				<td colspan={products.length} class="sticky inset-s-0 text-center font-bold">
 					{$_('compare.nutritional_values_per_100g')}
 				</td>
 			</tr>
 			{#each availableNutrients as nutrient (nutrient.key)}
 				<tr>
 					<td
-						class="sticky left-0 w-40 overflow-hidden bg-base-100 leading-tight font-semibold break-words whitespace-normal"
+						class="sticky inset-s-0 w-40 overflow-hidden bg-base-100 leading-tight font-semibold break-words whitespace-normal"
 						>{nutrient.label}</td
 					>
 					{#each products as product, index (product.code)}

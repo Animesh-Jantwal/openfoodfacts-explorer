@@ -134,11 +134,11 @@
 	{#if title}
 		<h3 class="mb-2 text-lg font-semibold">{title}</h3>
 	{/if}
-	<div bind:this={chartContainer} class="vega-chart relative w-full">
+	<div bind:this={chartContainer} dir="ltr" class="vega-chart relative w-full">
 		{#if isLoading}
 			<div class="flex h-32 items-center justify-center">
 				<div class="loading loading-md loading-spinner"></div>
-				<span class="ml-2">Loading chart...</span>
+				<span class="ms-2">Loading chart...</span>
 			</div>
 		{/if}
 		{#if error}

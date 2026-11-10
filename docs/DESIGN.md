@@ -189,6 +189,35 @@ Translation files are located in `src/lib/i18n/messages/`. The project aims to c
    - (Optional) Add translations to other locale files (e.g., `it-IT.json`).
    - Use the key in your component with a `{ default: '...' }` fallback.
 
+### Right-to-left languages
+
+Arabic, Hebrew, Persian, Urdu, Sindhi, Uyghur and Yiddish are written right to left. For these languages the page sets `dir="rtl"` (see `src/lib/i18n/direction.ts`), and the browser mirrors the layout, as long as styles follow the writing direction:
+
+- **Use start/end utilities, not left/right ones:**
+
+  | Instead of                | Use                      |
+  | ------------------------- | ------------------------ |
+  | `ml-*`, `mr-*`            | `ms-*`, `me-*`           |
+  | `pl-*`, `pr-*`            | `ps-*`, `pe-*`           |
+  | `left-*`, `right-*`       | `inset-s-*`, `inset-e-*` |
+  | `text-left`, `text-right` | `text-start`, `text-end` |
+  | `border-l`, `rounded-r`   | `border-s`, `rounded-e`  |
+
+  In `<style>` blocks, use logical properties such as `margin-inline-start`. `src/logical-classes.test.ts` fails on left/right styles and names the replacement.
+
+- **Mirror icons that point along the reading direction**, such as back and next arrows, chevrons that open a side panel, and login and logout. Add `rtl:rotate-180`, which combines with hover scale effects, unlike `-scale-x-100`.
+- **Don't mirror icons that show rotation, time or media playback.**
+- **Keep charts, maps, graphs and image editors left to right** with `dir="ltr"` on their container.
+- **Elements placed from pointer or element coordinates** (`left: {x}px`) can keep left/right positions.
+
+```svelte
+<!-- Recommended -->
+<IconMdiArrowLeft class="me-2 h-4 w-4 rtl:rotate-180" />
+
+<!-- Avoid: wrong side and wrong direction in right-to-left languages -->
+<IconMdiArrowLeft class="mr-2 h-4 w-4" />
+```
+
 ## 4. Accessibility (a11y)
 
 We aim to make Open Food Facts accessible to everyone. Before submitting a PR, review the checklist below.

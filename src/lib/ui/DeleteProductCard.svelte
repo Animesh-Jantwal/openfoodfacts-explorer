@@ -113,7 +113,7 @@
 
 	<div class="mt-2 flex flex-col gap-2">
 		<div class="flex flex-wrap items-center gap-1.5">
-			<span class="mr-1 text-xs text-base-content/60">
+			<span class="me-1 text-xs text-base-content/60">
 				{$_('product.moderator.delete_product_prefill_reasons_label', {
 					default: 'Common reasons:'
 				})}
@@ -234,7 +234,7 @@
 				disabled={isSubmitting || typedBarcode.trim() !== barcode}
 			>
 				{#if isSubmitting}
-					<span class="loading mr-1 loading-xs loading-spinner"></span>
+					<span class="loading me-1 loading-xs loading-spinner"></span>
 				{/if}
 				{$_('product.moderator.delete_product_modal_btn', {
 					default: 'Permanently Delete'

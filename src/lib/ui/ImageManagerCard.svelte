@@ -227,7 +227,7 @@
 			disabled={isSubmitting}
 		>
 			<IconMdiImageMove class="h-4 w-4 shrink-0" />
-			<span class="truncate text-left text-xs sm:overflow-visible sm:whitespace-normal">
+			<span class="truncate text-start text-xs sm:overflow-visible sm:whitespace-normal">
 				{$_('product.moderator.image_manager_tab_move', { default: 'Move' })}
 			</span>
 		</button>
@@ -245,7 +245,7 @@
 			disabled={isSubmitting}
 		>
 			<IconMdiImageRemove class="h-4 w-4 shrink-0" />
-			<span class="truncate text-left text-xs sm:overflow-visible sm:whitespace-normal">
+			<span class="truncate text-start text-xs sm:overflow-visible sm:whitespace-normal">
 				{$_('product.moderator.image_manager_tab_delete', { default: 'Delete' })}
 			</span>
 		</button>
@@ -363,7 +363,7 @@
 						{/if}
 
 						<div
-							class="absolute inset-x-0 bottom-0 flex flex-col gap-0.5 bg-neutral/70 p-1.5 text-left text-xs text-neutral-content opacity-0 transition-opacity hover:opacity-100"
+							class="absolute inset-x-0 bottom-0 flex flex-col gap-0.5 bg-neutral/70 p-1.5 text-start text-xs text-neutral-content opacity-0 transition-opacity hover:opacity-100"
 						>
 							<span class="truncate">
 								{$_('product.moderator.image_manager_uploaded_by', {
@@ -383,7 +383,7 @@
 					<!-- Hover Preview Eye Icon -->
 					<button
 						type="button"
-						class="btn absolute top-2 left-2 z-25 flex btn-circle items-center justify-center bg-base-100/80 opacity-0 shadow-sm transition-opacity btn-xs group-hover:opacity-100 hover:bg-base-100"
+						class="btn absolute inset-s-2 top-2 z-25 flex btn-circle items-center justify-center bg-base-100/80 opacity-0 shadow-sm transition-opacity btn-xs group-hover:opacity-100 hover:bg-base-100"
 						onclick={() => openPreview(img)}
 						aria-label={$_('product.moderator.image_manager_preview_label', {
 							default: 'Preview image'

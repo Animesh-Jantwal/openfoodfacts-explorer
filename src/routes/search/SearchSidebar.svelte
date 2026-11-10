@@ -34,7 +34,7 @@
 </script>
 
 <div class={['hidden h-full lg:block', hidden ? 'lg:hidden' : '']}>
-	<aside class="sticky top-24 flex max-h-[calc(100vh-140px)] w-50 flex-col pr-2 xl:w-60">
+	<aside class="sticky top-24 flex max-h-[calc(100vh-140px)] w-50 flex-col pe-2 xl:w-60">
 		<div class="mb-3 flex shrink-0 items-center justify-between px-1">
 			<div class="flex items-center gap-1.5">
 				<IconMdiFilterVariant class="h-4 w-4 text-base-content/70" />
@@ -56,7 +56,7 @@
 
 		<nav
 			aria-label={$_('search.filters_sidebar_title', { default: 'Search filters' })}
-			class="relative flex flex-1 [scrollbar-width:none] flex-col gap-1 overflow-y-auto border-l-2 border-base-300 pl-3 text-sm [&::-webkit-scrollbar]:hidden"
+			class="relative flex flex-1 [scrollbar-width:none] flex-col gap-1 overflow-y-auto border-s-2 border-base-300 ps-3 text-sm [&::-webkit-scrollbar]:hidden"
 		>
 			<SearchFilters
 				{facets}
@@ -76,13 +76,13 @@
 	<button
 		type="button"
 		onclick={() => (hidden = false)}
-		class="group fixed top-1/2 left-0 z-50 hidden h-24 w-5 -translate-y-1/2 cursor-pointer items-center justify-center rounded-r-xl border border-l-0 border-base-300 bg-base-200 text-base-content/70 shadow-md transition-all duration-300 outline-none hover:w-7 hover:border-primary hover:bg-primary hover:text-primary-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:flex"
+		class="group fixed inset-s-0 top-1/2 z-50 hidden h-24 w-5 -translate-y-1/2 cursor-pointer items-center justify-center rounded-e-xl border border-s-0 border-base-300 bg-base-200 text-base-content/70 shadow-md transition-all duration-300 outline-none hover:w-7 hover:border-primary hover:bg-primary hover:text-primary-content focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:flex"
 		title={$_('search.filters_title', { default: 'Filters' })}
 		aria-label={$_('search.filters_title', { default: 'Filters' })}
 	>
 		<IconMdiChevronRight
 			aria-hidden="true"
-			class="h-4 w-4 transition-transform duration-200 group-hover:scale-125"
+			class="h-4 w-4 transition-transform duration-200 group-hover:scale-125 rtl:rotate-180"
 		/>
 	</button>
 {/if}

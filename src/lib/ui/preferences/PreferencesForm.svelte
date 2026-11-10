@@ -49,7 +49,7 @@
 		{#await groups}
 			<div class="flex items-center justify-center py-8">
 				<span class="loading loading-lg loading-spinner"></span>
-				<span class="ml-2">Loading preferences...</span>
+				<span class="ms-2">Loading preferences...</span>
 			</div>
 		{:then groups}
 			{#each groups as group (group.id)}

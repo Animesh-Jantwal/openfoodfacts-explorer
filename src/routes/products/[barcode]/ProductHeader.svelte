@@ -208,7 +208,7 @@
 
 		<div class="min-w-0">
 			<!-- Metadata Body -->
-			<div class="flex flex-col gap-3 text-center md:text-left">
+			<div class="flex flex-col gap-3 text-center md:text-start">
 				<!-- Brands -->
 				{@render taxonomyTags(
 					'product.header.brands',

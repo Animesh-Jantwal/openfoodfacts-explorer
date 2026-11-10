@@ -219,7 +219,7 @@
 
 			<div
 				style={addPickerMobileStyle}
-				class="dropdown-content absolute top-full left-0 z-50 mt-1 w-full max-w-[calc(100vw-2rem)] min-w-[240px] rounded-box border border-base-300 bg-base-100 p-2.5 shadow-xl max-md:fixed md:w-60"
+				class="dropdown-content absolute inset-s-0 top-full z-50 mt-1 w-full max-w-[calc(100vw-2rem)] min-w-[240px] rounded-box border border-base-300 bg-base-100 p-2.5 shadow-xl max-md:fixed md:w-60"
 			>
 				<div class="mb-2 flex items-center justify-between gap-1 border-b border-base-300/60 pb-2">
 					<div class="flex items-center gap-1.5 text-xs font-semibold text-base-content">
@@ -241,20 +241,20 @@
 
 				<!-- Search filter input -->
 				<div class="relative mb-2 w-full">
-					<IconMdiMagnify class="absolute top-2 left-2 h-3.5 w-3.5 text-base-content/40" />
+					<IconMdiMagnify class="absolute inset-s-2 top-2 h-3.5 w-3.5 text-base-content/40" />
 					<input
 						bind:this={addPickerInput}
 						type="text"
 						placeholder={$_('search.search_available_facets', {
 							default: 'Filter available facets...'
 						})}
-						class="input-bordered input box-border w-full rounded-md bg-base-100 pl-7 text-xs input-xs"
+						class="input-bordered input box-border w-full rounded-md bg-base-100 ps-7 text-xs input-xs"
 						bind:value={addPickerQuery}
 					/>
 					{#if addPickerQuery}
 						<button
 							type="button"
-							class="absolute top-1.5 right-1.5 text-base-content/40 hover:text-base-content"
+							class="absolute inset-e-1.5 top-1.5 text-base-content/40 hover:text-base-content"
 							onclick={() => (addPickerQuery = '')}
 							aria-label={$_('search.clear_search', { default: 'Clear search' })}
 						>
@@ -264,7 +264,7 @@
 				</div>
 
 				<!-- Facets List Grouped by Category -->
-				<div class="max-h-56 scrollbar-thin overflow-y-auto pr-0.5">
+				<div class="max-h-56 scrollbar-thin overflow-y-auto pe-0.5">
 					{#if filteredCatalogFacets.length === 0}
 						<div class="py-4 text-center text-xs text-base-content/60">
 							{$_('search.no_matching_facets', { default: 'No matching facets' })}
@@ -288,7 +288,7 @@
 										{@const ItemIcon = item.icon}
 										<button
 											type="button"
-											class="flex w-full cursor-pointer items-center justify-between rounded-md px-2 py-1 text-left text-xs font-medium text-base-content transition-colors hover:bg-primary/10 hover:text-primary"
+											class="flex w-full cursor-pointer items-center justify-between rounded-md px-2 py-1 text-start text-xs font-medium text-base-content transition-colors hover:bg-primary/10 hover:text-primary"
 											onclick={() => handleAddFacet(item.key)}
 										>
 											<div class="flex items-center gap-2 truncate">

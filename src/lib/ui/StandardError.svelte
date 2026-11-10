@@ -94,7 +94,7 @@
 							Show Technical Details ({errors.length})
 						</div>
 						<div class="collapse-content">
-							<ul class="list-disc overflow-x-auto py-2 pl-5 font-mono text-xs">
+							<ul class="list-disc overflow-x-auto py-2 ps-5 font-mono text-xs">
 								{#each errors as err, i (i)}
 									<li class="mb-2">
 										{#if typeof err === 'string'}

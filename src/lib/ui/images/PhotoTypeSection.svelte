@@ -317,7 +317,7 @@
 							</div>
 						</button>
 						<div
-							class="absolute top-1 right-1 z-10 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+							class="absolute inset-e-1 top-1 z-10 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
 						>
 							<a
 								class="btn btn-circle border-none bg-base-100/80 text-base-content btn-xs hover:bg-base-100"

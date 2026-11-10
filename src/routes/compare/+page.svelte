@@ -97,12 +97,12 @@
 					/>
 				{:else}
 					<button
-						class="group text-left transition-colors hover:text-primary"
+						class="group text-start transition-colors hover:text-primary"
 						onclick={startEditingTitle}
 					>
 						<h1 class="text-2xl font-bold">
 							{comparisonTitle || $_('compare.page_title')}
-							<span class="ml-2 text-sm opacity-0 transition-opacity group-hover:opacity-50"
+							<span class="ms-2 text-sm opacity-0 transition-opacity group-hover:opacity-50"
 								>✏️</span
 							>
 						</h1>

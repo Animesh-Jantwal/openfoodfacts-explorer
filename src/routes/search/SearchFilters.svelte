@@ -165,11 +165,11 @@
 			title={displayName}
 			class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-base-content transition-all duration-150 select-none group-open:bg-base-200/50 group-open:text-primary hover:bg-base-200/60"
 		>
-			<div class="flex min-w-0 items-center gap-1.5 pr-1.5">
+			<div class="flex min-w-0 items-center gap-1.5 pe-1.5">
 				<span class="truncate" title={displayName}>{displayName}</span>
 				<span class="text-xs font-normal opacity-55">({facet.items.length})</span>
 				{#if activeCount > 0}
-					<span class="ml-0.5 badge h-4 min-h-4 px-1.5 badge-xs text-[10px] font-bold badge-primary"
+					<span class="ms-0.5 badge h-4 min-h-4 px-1.5 badge-xs text-[10px] font-bold badge-primary"
 						>{activeCount}</span
 					>
 				{/if}
@@ -240,7 +240,7 @@
 										})}
 							>
 								<span>{item.name.toUpperCase()}</span>
-								<span class="ml-1 text-[10px] font-normal text-base-content/60">({item.count})</span
+								<span class="ms-1 text-[10px] font-normal text-base-content/60">({item.count})</span
 								>
 							</button>
 
@@ -273,11 +273,11 @@
 			{:else}
 				<!-- Search within facet -->
 				<div class="relative mb-2">
-					<IconMdiMagnify class="absolute top-2 left-2 h-3.5 w-3.5 text-base-content/40" />
+					<IconMdiMagnify class="absolute inset-s-2 top-2 h-3.5 w-3.5 text-base-content/40" />
 					<input
 						type="text"
 						placeholder={$_('search.filter_placeholder', { default: 'Filter...' })}
-						class="input-bordered input w-full rounded-md bg-base-100 pl-7 text-xs input-xs"
+						class="input-bordered input w-full rounded-md bg-base-100 ps-7 text-xs input-xs"
 						bind:value={searchQueries[facetKey]}
 						onkeydown={(e) => {
 							if (e.key === 'Enter') {
@@ -293,7 +293,7 @@
 					{#if searchQueries[facetKey]}
 						<button
 							type="button"
-							class="absolute top-1.5 right-1.5 text-base-content/50 hover:text-base-content"
+							class="absolute inset-e-1.5 top-1.5 text-base-content/50 hover:text-base-content"
 							onclick={() => (searchQueries[facetKey] = '')}
 							title={$_('search.clear_search', { default: 'Clear search' })}
 							aria-label={$_('search.clear_search', { default: 'Clear search' })}
@@ -471,10 +471,10 @@
 			title={freeLabel}
 			class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-base-content transition-all duration-150 select-none group-open:bg-base-200/50 group-open:text-primary hover:bg-base-200/60"
 		>
-			<div class="flex min-w-0 items-center gap-1.5 pr-1.5">
+			<div class="flex min-w-0 items-center gap-1.5 pe-1.5">
 				<span class="truncate" title={freeLabel}>{freeLabel}</span>
 				{#if activeCount > 0}
-					<span class="ml-0.5 badge h-4 min-h-4 px-1.5 badge-xs text-[10px] font-bold badge-primary"
+					<span class="ms-0.5 badge h-4 min-h-4 px-1.5 badge-xs text-[10px] font-bold badge-primary"
 						>{activeCount}</span
 					>
 				{/if}
@@ -504,7 +504,7 @@
 
 			<!-- Search within facet -->
 			<div class="relative mb-2">
-				<IconMdiMagnify class="absolute top-2 left-2 h-3.5 w-3.5 text-base-content/40" />
+				<IconMdiMagnify class="absolute inset-s-2 top-2 h-3.5 w-3.5 text-base-content/40" />
 				<input
 					type="text"
 					placeholder={freeFacet.placeholderKey
@@ -512,7 +512,7 @@
 								default: freeFacet.defaultPlaceholder || freeFacet.placeholder
 							})
 						: freeFacet.placeholder || $_('search.filter_placeholder', { default: 'Filter...' })}
-					class="input-bordered input w-full rounded-md bg-base-100 pl-7 text-xs input-xs"
+					class="input-bordered input w-full rounded-md bg-base-100 ps-7 text-xs input-xs"
 					bind:value={searchQueries[freeFacet.key]}
 					onkeydown={(e) => {
 						if (e.key === 'Enter') {
@@ -528,7 +528,7 @@
 				{#if searchQueries[freeFacet.key]}
 					<button
 						type="button"
-						class="absolute top-1.5 right-1.5 text-base-content/50 hover:text-base-content"
+						class="absolute inset-e-1.5 top-1.5 text-base-content/50 hover:text-base-content"
 						onclick={() => (searchQueries[freeFacet.key] = '')}
 						aria-label={$_('search.clear_search', { default: 'Clear search' })}
 					>
@@ -691,7 +691,7 @@
 			title={$_('search.add_facet_button', { default: 'Add facet' })}
 			class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-sm font-semibold text-base-content transition-all duration-150 select-none group-open:bg-base-200/50 group-open:text-primary hover:bg-base-200/60"
 		>
-			<div class="flex min-w-0 items-center gap-1.5 pr-1.5">
+			<div class="flex min-w-0 items-center gap-1.5 pe-1.5">
 				<span class="truncate" title={$_('search.add_facet_button', { default: 'Add facet' })}
 					>{$_('search.add_facet_button', { default: 'Add facet' })}</span
 				>
@@ -705,20 +705,20 @@
 		<div class="mt-1 flex flex-col gap-1 px-0.5 pt-0.5 pb-1">
 			<!-- Search filter input -->
 			<div class="relative mb-2">
-				<IconMdiMagnify class="absolute top-2 left-2 h-3.5 w-3.5 text-base-content/40" />
+				<IconMdiMagnify class="absolute inset-s-2 top-2 h-3.5 w-3.5 text-base-content/40" />
 				<input
 					bind:this={addPickerInput}
 					type="text"
 					placeholder={$_('search.search_available_facets', {
 						default: 'Filter available facets...'
 					})}
-					class="input-bordered input w-full rounded-md bg-base-100 pl-7 text-xs input-xs"
+					class="input-bordered input w-full rounded-md bg-base-100 ps-7 text-xs input-xs"
 					bind:value={addPickerQuery}
 				/>
 				{#if addPickerQuery}
 					<button
 						type="button"
-						class="absolute top-1.5 right-1.5 text-base-content/50 hover:text-base-content"
+						class="absolute inset-e-1.5 top-1.5 text-base-content/50 hover:text-base-content"
 						onclick={() => (addPickerQuery = '')}
 						aria-label={$_('search.clear_search', { default: 'Clear search' })}
 					>
@@ -728,7 +728,7 @@
 			</div>
 
 			<!-- Facets List Grouped by Category -->
-			<div class="max-h-60 scrollbar-thin overflow-y-auto pr-0.5">
+			<div class="max-h-60 scrollbar-thin overflow-y-auto pe-0.5">
 				{#if filteredCatalogFacets.length === 0}
 					<div class="py-2 text-center text-xs text-base-content/50">
 						{$_('search.no_matching_facets', { default: 'No matching facets' })}

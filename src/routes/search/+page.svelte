@@ -310,12 +310,12 @@
 				<IconMdiChevronDown class="h-4 w-4 shrink-0" />
 			</summary>
 			<ul
-				class="menu dropdown-content absolute top-full right-0 z-50 mt-1 w-60 rounded-box border border-base-300 bg-base-100 p-2 shadow-xl max-sm:right-auto max-sm:left-0 sm:w-64"
+				class="menu dropdown-content absolute inset-e-0 top-full z-50 mt-1 w-60 rounded-box border border-base-300 bg-base-100 p-2 shadow-xl max-sm:inset-s-0 max-sm:inset-e-auto sm:w-64"
 			>
 				{#each SORT_OPTIONS as { label, value } (value)}
 					<li>
 						<button
-							class="w-full text-left leading-tight break-words whitespace-normal"
+							class="w-full text-start leading-tight break-words whitespace-normal"
 							onclick={() => handleSortChange(value)}
 						>
 							{$_(label)}
@@ -616,7 +616,7 @@
 					{#each visibleProducts as { product, scoreData } (product.code)}
 						<div class="indicator block w-full">
 							{#if $preferences.displayPricesInSearch}
-								<span class="indicator-item right-4 z-20 badge badge-sm badge-secondary">
+								<span class="indicator-item inset-e-4 z-20 badge badge-sm badge-secondary">
 									{$_('search.prices_badge', {
 										values: { count: data.prices[product.code] }
 									})}

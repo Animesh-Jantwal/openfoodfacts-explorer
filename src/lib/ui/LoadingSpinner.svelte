@@ -66,7 +66,7 @@
 	<!-- Rotating funny message -->
 	<div class="text-center">
 		<p class={['text-base-content transition-opacity duration-300', reason || 'text-xl']}>
-			<span class="mr-2" aria-hidden="true">{currentMessage.emoji}</span>
+			<span class="me-2" aria-hidden="true">{currentMessage.emoji}</span>
 			{$_('loading.message', { default: currentMessage.text })}
 		</p>
 	</div>

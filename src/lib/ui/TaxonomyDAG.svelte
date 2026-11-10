@@ -224,6 +224,7 @@
 
 <div
 	bind:this={container}
+	dir="ltr"
 	class="h-96 w-full rounded border bg-white"
 	style="background-color: {darkMode ? dark.bg : light.bg};"
 	role="region"

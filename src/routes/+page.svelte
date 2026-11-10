@@ -92,13 +92,18 @@
 >
 	<!-- Decorative SVG assets -->
 
-	<img src={heroIcons[0]} alt="" aria-hidden="true" class="decorative-svg -top-10 -left-10 w-40" />
+	<img
+		src={heroIcons[0]}
+		alt=""
+		aria-hidden="true"
+		class="decorative-svg -inset-s-10 -top-10 w-40"
+	/>
 
 	<img
 		src={heroIcons[1]}
 		alt=""
 		aria-hidden="true"
-		class="decorative-svg -right-10 -bottom-10 w-40"
+		class="decorative-svg -inset-e-10 -bottom-10 w-40"
 	/>
 
 	<div

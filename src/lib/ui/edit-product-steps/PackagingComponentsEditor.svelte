@@ -187,7 +187,7 @@
 				default: 'Guidance for packaging parts:'
 			})}
 		</p>
-		<ul class="list-disc space-y-1 pl-5 text-base-content/70">
+		<ul class="list-disc space-y-1 ps-5 text-base-content/70">
 			<li>
 				<span class="font-medium"
 					>{$_('product.edit.packaging_component.number_of_units', {
@@ -317,7 +317,7 @@
 								<li>
 									<button
 										type="button"
-										class="w-full cursor-pointer px-3 py-2 text-left text-sm transition-colors hover:bg-primary/10"
+										class="w-full cursor-pointer px-3 py-2 text-start text-sm transition-colors hover:bg-primary/10"
 										onmousedown={(e) => {
 											e.preventDefault();
 											selectSuggestion(index, 'shape', suggestion);
@@ -357,7 +357,7 @@
 								<li>
 									<button
 										type="button"
-										class="w-full cursor-pointer px-3 py-2 text-left text-sm transition-colors hover:bg-primary/10"
+										class="w-full cursor-pointer px-3 py-2 text-start text-sm transition-colors hover:bg-primary/10"
 										onmousedown={(e) => {
 											e.preventDefault();
 											selectSuggestion(index, 'material', suggestion);
@@ -397,7 +397,7 @@
 								<li>
 									<button
 										type="button"
-										class="w-full cursor-pointer px-3 py-2 text-left text-sm transition-colors hover:bg-primary/10"
+										class="w-full cursor-pointer px-3 py-2 text-start text-sm transition-colors hover:bg-primary/10"
 										onmousedown={(e) => {
 											e.preventDefault();
 											selectSuggestion(index, 'recycling', suggestion);

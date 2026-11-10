@@ -122,7 +122,7 @@
 				</div>
 			{/if}
 		</div>
-		<div class="absolute right-2 z-10 flex h-full flex-col items-center justify-center gap-2">
+		<div class="absolute inset-e-2 z-10 flex h-full flex-col items-center justify-center gap-2">
 			<button
 				class="btn btn-circle bg-base-100/80 btn-md hover:bg-base-100"
 				onclick={zoomIn}
@@ -153,7 +153,7 @@
 			</button>
 		</div>
 
-		<div class="absolute top-2 right-2 z-10">
+		<div class="absolute inset-e-2 top-2 z-10">
 			<button
 				class="btn btn-circle bg-base-100/80 btn-md hover:bg-base-100"
 				onclick={(e) => {
@@ -186,7 +186,7 @@
 			</button>
 		</div>
 
-		<div class="absolute bottom-2 left-2 z-10">
+		<div class="absolute inset-s-2 bottom-2 z-10">
 			{#if image?.caption ?? image?.alt}
 				<div
 					class="rounded-md bg-base-100/80 px-3 py-1 text-sm font-medium text-base-content shadow-md backdrop-blur-sm"
@@ -196,7 +196,7 @@
 			{/if}
 		</div>
 
-		<div class="absolute top-2 left-2 z-10 flex gap-2">
+		<div class="absolute inset-s-2 top-2 z-10 flex gap-2">
 			{#if image?.productCode}
 				<!-- Edit button -->
 				{#if $userInfo}

@@ -112,4 +112,4 @@
 	}
 </script>
 
-<div bind:this={mapContainer} class="h-96 w-full rounded-lg"></div>
+<div bind:this={mapContainer} dir="ltr" class="h-96 w-full rounded-lg"></div>
