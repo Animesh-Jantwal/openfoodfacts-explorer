@@ -2,6 +2,9 @@ import { derived } from 'svelte/store';
 import { getContext, setContext } from 'svelte';
 import { userAuthTokens } from './auth';
 import { decodeJwt } from 'jose';
+import { dev } from '$app/env';
+import { FORCE_ROLE } from '$app/env/public';
+import type { CurrentUserPermissions } from '#lib/api/permissions.js';
 
 export type UserInfo = {
 	preferred_username: string;
@@ -13,6 +16,13 @@ export type UserPermissionsContext = {
 	isAdmin: boolean;
 	isModerator: boolean;
 };
+
+export function toPermissions(user?: CurrentUserPermissions['user']): UserPermissionsContext {
+	return {
+		isAdmin: user?.admin === 1,
+		isModerator: user?.moderator === 1 || (dev && FORCE_ROLE === 'moderator')
+	};
+}
 
 export function setPermissionsCtx(ctx: () => UserPermissionsContext) {
 	setContext('permissions-ctx', ctx);

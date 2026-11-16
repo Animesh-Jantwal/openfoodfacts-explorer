@@ -60,6 +60,18 @@ If you see an issue that you would like to work on, please follow these guidelin
 5. Open a Pull Request (PR) against the `main` branch of the original repository.
 6. In your PR description, reference the issue you are addressing (e.g., "Fixes #123") and provide a clear explanation of your changes, following the suggested template.
 
+## Testing moderator features locally
+
+Some features, such as Moderator Mode in the settings and the moderation tools in the product editor, are only shown to moderators. To see them without a moderator account, add this line to your `.env` file and restart `pnpm dev`:
+
+```env
+FORCE_ROLE=moderator
+```
+
+- It only works with the dev server. Production builds ignore it.
+- It only changes what the interface shows. Your account keeps its real permissions on the Open Food Facts server.
+- `moderator` is the only supported value. Roles have no hierarchy: admins do not get moderator features automatically, and forcing `moderator` does not enable admin-only features.
+
 ## Design & UX Guidelines
 
 This project has a specific design system (Tailwind CSS v4 + DaisyUI v5). Before building any UI, please read our **[Design Guide](DESIGN.md)** to ensure consistency.

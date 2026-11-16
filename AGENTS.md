@@ -129,6 +129,7 @@ src/
 | Build fails after dependency change | Stale lockfile                                    | `rm -rf node_modules pnpm-lock.yaml && pnpm install`                         |
 | App won't start                     | Missing `.env`                                    | `cp .env.example .env`                                                       |
 | CI fails on lint/format             | Unformatted code                                  | `pnpm format && pnpm lint`                                                   |
+| Moderator features are hidden       | Account has no moderator role                     | Add `FORCE_ROLE=moderator` to `.env` (dev server only)                       |
 | `binding_property_non_reactive`     | `bind:prop={obj.subprop}` on a `$bindable()` prop | Use one-way `value` + `oninput` that reassigns the parent object (see below) |
 
 ### Svelte 5: `binding_property_non_reactive`
